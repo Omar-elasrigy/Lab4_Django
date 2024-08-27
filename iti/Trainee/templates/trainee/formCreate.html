@@ -1,0 +1,16 @@
+{% block head_content %}
+    
+{% endblock %}
+
+{% block main_content %}
+<form method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+{{form.as_p}}
+
+<input type="submit" value="Add">
+
+</form>
+<div style="color:red">
+    <h1>{{error}}</h1>
+</div>
+    {% endblock %}
